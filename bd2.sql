@@ -85,38 +85,10 @@ END $$
 DELIMITER ;
 CALL przydzielkontrakty();
 zadanaie 6:
-/* fajne rozwiazanie, takie nie za sensowne*/ 
+
 ALTER TABLE kontrakty CHANGE gaza gaza INT COMMENT 'zloty miesiecznie';
 INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 1, '20150108', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 2, '20150102', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 3, '20150103', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 4, '20150104', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 5, '20150105', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 6, '20150106', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 7, '20150102', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 8, '20150109', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 9, '20150102', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 10, '20150501', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 11, '20130101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 12, '20110101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 13, '20100101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 14, '20100201', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 15, '20150501', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 16, '20150601', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 17, '20150201', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 18, '20150501', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 19, '20151101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 20, '20150102', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 21, '20150112', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 22, '20150119', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 23, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 24, '20150108', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 25, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 26, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 27, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 28, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 29, '20150101', '20160101', 3333);
-INSERT INTO kontrakty (agent, aktor, poczatek, koniec, gaza) VALUES ((SELECT licencja from agenci order by rand() LIMIT 1), 30, '20150101', '20160101', 3333);
+
 zadanie 7:
 DELIMITER //
 CREATE FUNCTION znajdz (a VARCHAR(30), b VARCHAR(30)) RETURNS VARCHAR(200) DETERMINISTIC
